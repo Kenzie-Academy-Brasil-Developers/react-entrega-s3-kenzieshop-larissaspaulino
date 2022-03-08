@@ -4,6 +4,7 @@ import IndeterminateCheckBoxOutlinedIcon from '@mui/icons-material/Indeterminate
 import { useDispatch } from 'react-redux';
 
 import { Container, Quantity } from './styles'
+import formatValue from '../../utils/formatValue'
 import { addProductThunk, delProductThunk } from '../../store/modules/cart/thunk'
 
 
@@ -13,10 +14,12 @@ const ProductCart = ({ product }) => {
     
   return (
     <Container>
+        
         <img src={product.image}/>
         <div>
             <h3>{product.title}</h3>
-            <h4>{product.price * product.quantity}</h4>
+            <h4>{formatValue(product.price * product.quantity)}</h4>
+        
         </div>
         <Quantity>
             <IconButton onClick={() => dispatch(addProductThunk(product))}>

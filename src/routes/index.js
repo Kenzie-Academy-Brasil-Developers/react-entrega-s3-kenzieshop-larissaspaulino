@@ -1,8 +1,9 @@
-import { Switch, Route } from 'react-router-dom'
+import { Switch } from 'react-router-dom'
 
 import Home from '../pages/Home'
 import Cart from '../pages/Cart'
 import Login from '../pages/Login'
+import Route from './route'
 
 const Routes = () => {
   return (

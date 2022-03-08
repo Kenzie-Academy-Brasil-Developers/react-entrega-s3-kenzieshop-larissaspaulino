@@ -1,7 +1,16 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+
   margin-top: 20px;
+
+  > ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+  }
 
   > div {
     display: flex;
@@ -10,6 +19,7 @@ export const Container = styled.div`
     justify-content: space-evenly;
     background-color: #fff;
     height: 200px;
+    margin: 10px 10%;
     border-radius: 6px;
   }
 
