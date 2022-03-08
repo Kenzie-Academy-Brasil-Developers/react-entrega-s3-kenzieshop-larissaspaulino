@@ -17,11 +17,7 @@ const Product = ({ product }) => {
       <h3>{product.title}</h3>
       <div>
         <h4>{formatValue(product.price)}</h4>
-        {/* <IconButton aria-label='delete'
-            onClick={() => dispatch(delProduct(product))}
-            >
-          <DeleteIcon />
-        </IconButton> */}
+   
         <Tooltip title='Clique para adicionar o produto ao carrinho'>
           <IconButton
             aria-label='add to shopping cart'

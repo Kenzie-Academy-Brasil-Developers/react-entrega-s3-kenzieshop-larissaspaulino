@@ -11,8 +11,8 @@ import Header from '../../components/Header'
 const Cart = () => {
   const history = useHistory()
   
-  const dispatch = useDispatch()
   const products = useSelector((state) => state.cart)
+  console.log(products)
 
   return (
     <>

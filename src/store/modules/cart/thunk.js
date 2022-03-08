@@ -5,7 +5,7 @@ export const addProductThunk = (product) => (dispatch, getState) => {
 
   if (cart.find((prod) => product.id === prod.id)) {
     product.quantity++
-    dispatch(addProduct(cart))
+    dispatch(addProduct([...cart]))
     localStorage.setItem('@cart', JSON.stringify(cart))
   } else {
     product.quantity = 1
@@ -16,8 +16,6 @@ export const addProductThunk = (product) => (dispatch, getState) => {
 
 export const delProductThunk = (product) => (dispatch, getState) => {
   const { cart } = getState()
-  console.log(product)
-
 
   if (product.quantity === 1) {
     const newCart = cart.filter((prod) => prod.id !== product.id)
@@ -26,9 +24,9 @@ export const delProductThunk = (product) => (dispatch, getState) => {
 
   } else {
     product.quantity--
-    dispatch(delProduct(cart))
+    dispatch(delProduct([...cart]))
     localStorage.setItem('@cart', JSON.stringify(cart))
   }
 
-  // localStorage.setItem('@cart', cart)
+
 }

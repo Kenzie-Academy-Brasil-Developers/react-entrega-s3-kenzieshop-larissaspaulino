@@ -11,7 +11,8 @@ import { addProductThunk, delProductThunk } from '../../store/modules/cart/thunk
 const ProductCart = ({ product }) => {
 
    const dispatch = useDispatch()
-    
+   console.log(product)    
+   
   return (
     <Container>
         

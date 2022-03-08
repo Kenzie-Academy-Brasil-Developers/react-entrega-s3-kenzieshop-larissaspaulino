@@ -9,6 +9,7 @@ const cartReducers = (state = initialState, action) => {
   switch (action.type) {
 
     case ADD_PRODUCT:
+      console.log(product)
       return product
 
     case DEL_PRODUCT:
