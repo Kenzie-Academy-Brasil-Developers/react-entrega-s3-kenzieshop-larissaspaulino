@@ -1,6 +1,11 @@
-import { ADD_PRODUCT } from "./actionTypes"
+import { ADD_PRODUCT, DEL_PRODUCT } from "./actionTypes"
 
-export const addProduct = (products) => ({
+export const addProduct = (product) => ({
     type: ADD_PRODUCT,
-    products,
+    product,
+})
+
+export const delProduct = (product) => ({
+    type: DEL_PRODUCT,
+    product,
 })

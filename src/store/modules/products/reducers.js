@@ -4,15 +4,13 @@ const initialState = {
   products: [],
 }
 
-
 const productsReducers = (state = initialState, action) => {
   switch (action.type) {
+    case ALL_PRODUCTS:
+      const { products } = action
+      return { products }
 
-    case ALL_PRODUCTS: 
-    const { products } = action
-    return { products }
-      
-      default: 
+    default:
       return state
   }
 }

@@ -4,22 +4,15 @@ import { Container } from './styles'
 import { useSelector, useDispatch } from 'react-redux'
 
 import Product from '../../components/Product'
-// import api from '../../services/api'
 import { getProductsThunk } from '../../store/modules/products/thunk'
 
 const Home = () => {
-  const { products } = useSelector((state) => state.products)
+  const { products } = useSelector((state) => state.listProducts)
   const dispatch = useDispatch()
 
-  // const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // api.get('/products')
-    // .then((res) => {
-    //   setProducts(res.data)
-    //   setLoading(false)
-    // })
 
     dispatch(getProductsThunk(setLoading))
   }, [])

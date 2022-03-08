@@ -37,7 +37,12 @@ border-radius: 8px;
     > div {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         margin-top: 20px;
+    }
+
+     h4 {
+        color: var(--grey);
     }
 `
