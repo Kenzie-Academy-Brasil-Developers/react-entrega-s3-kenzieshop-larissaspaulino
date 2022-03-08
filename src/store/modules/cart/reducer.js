@@ -3,18 +3,15 @@ import { ADD_PRODUCT, DEL_PRODUCT } from './actionTypes'
 const initialState = JSON.parse(localStorage.getItem('@cart')) || []
 
 const cartReducers = (state = initialState, action) => {
-
-  const { product } = action
+  const { cartProducts } = action
 
   switch (action.type) {
-
     case ADD_PRODUCT:
-      console.log(product)
-      return product
+      return cartProducts
 
     case DEL_PRODUCT:
-      return product
-      
+      return cartProducts
+
     default:
       return state
   }

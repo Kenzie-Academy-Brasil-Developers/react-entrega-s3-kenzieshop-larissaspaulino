@@ -21,12 +21,9 @@ export const delProductThunk = (product) => (dispatch, getState) => {
     const newCart = cart.filter((prod) => prod.id !== product.id)
     dispatch(delProduct(newCart))
     localStorage.setItem('@cart', JSON.stringify(newCart))
-
   } else {
     product.quantity--
     dispatch(delProduct([...cart]))
     localStorage.setItem('@cart', JSON.stringify(cart))
   }
-
-
 }

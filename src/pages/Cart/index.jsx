@@ -10,9 +10,8 @@ import Header from '../../components/Header'
 
 const Cart = () => {
   const history = useHistory()
-  
+
   const products = useSelector((state) => state.cart)
-  console.log(products)
 
   return (
     <>
@@ -27,7 +26,11 @@ const Cart = () => {
           <h3>Resumo da compra:</h3>
           <p>
             {formatValue(
-              products.reduce((acc, product) => Number(product.price) + acc, 0)
+              products.reduce(
+                (acc, product) =>
+                  Number(product.price * product.quantity) + acc,
+                0
+              )
             )}
           </p>
           <Button

@@ -3,8 +3,9 @@ import { useHistory } from 'react-router-dom'
 import * as yup from 'yup'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { useState } from 'react'
+// import { useState } from 'react'
 import { useDispatch } from 'react-redux'
+
 import { signInThunk } from '../../store/modules/user/thunk'
 
 import { Container, Content } from './styles'
@@ -20,12 +21,8 @@ const Login = () => {
   // })
 
   const schema = yup.object().shape({
-    username: yup
-      .string()
-      .required('Campo obrigatório!'),
-    password: yup
-      .string()
-      .required('Campo obrigatório!'),
+    username: yup.string().required('Campo obrigatório!'),
+    password: yup.string().required('Campo obrigatório!'),
   })
 
   const {
@@ -36,7 +33,6 @@ const Login = () => {
     // defaultValues: { ...defaultValues },
     resolver: yupResolver(schema),
   })
-
 
   const onSubmitFunction = (data) => {
     dispatch(signInThunk(data))
@@ -53,7 +49,6 @@ const Login = () => {
           {...register('username')}
           fullWidth
           label='Username'
-         
           variant='outlined'
         />
         <TextField

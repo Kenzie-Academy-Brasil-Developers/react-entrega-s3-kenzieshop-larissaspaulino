@@ -1,15 +1,14 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-
   margin-top: 20px;
 
   > ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
   }
 
   > div {
