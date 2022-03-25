@@ -6,10 +6,10 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      
+
       <Routes />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
