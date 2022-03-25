@@ -12,3 +12,4 @@ Nessa aplicação escrita em REACT foram utilizadas as seguintes tecnologias:
 - react-hook-form + yup
 - MUI
 - styled components
+- localStorage
